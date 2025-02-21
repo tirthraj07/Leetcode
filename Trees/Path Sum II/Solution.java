@@ -25,7 +25,7 @@ class TreeNode {
 class Solution {
     private List<List<Integer>> sol = new ArrayList<>();
 
-    private void dfs(TreeNode root, int currentSum, int targetSum, List<Integer> currentPath) {
+    private void dfs(TreeNode root, int currentSum, int targetSum, LinkedList<Integer> currentPath) {
         currentSum += root.val;
         currentPath.add(root.val);
         if (currentSum == targetSum && root.left == null && root.right == null) {
@@ -37,13 +37,13 @@ class Solution {
         if (root.right != null)
             dfs(root.right, currentSum, targetSum, currentPath);
 
-        currentPath.remove(currentPath.size() - 1);
+        currentPath.removeLast();
     }
 
     public List<List<Integer>> pathSum(TreeNode root, int targetSum) {
         if (root == null)
             return sol;
-        List<Integer> currentPath = new LinkedList<>();
+        LinkedList<Integer> currentPath = new LinkedList<>();
         dfs(root, 0, targetSum, currentPath);
 
         return sol;
