@@ -145,6 +145,18 @@ public class Mastercard {
         // Solution -> 0
         System.out.println("Test Case 5 : " + testcase5.solution(grid5, word5)); // 0
 
+        // Test case 6
+        Mastercard testcase6 = new Mastercard();
+        char[][] grid6 = {
+                { 'A', 'A', 'A', 'A' },
+                { 'A', 'A', 'A', 'A' },
+                { 'A', 'A', 'A', 'A' },
+                { 'A', 'A', 'A', 'A' }
+        };
+        String word6 = "A";
+        // Solution -> 0
+        System.out.println("Test Case 6 : " + testcase6.solution(grid6, word6)); // 0
+
     }
 
 }
