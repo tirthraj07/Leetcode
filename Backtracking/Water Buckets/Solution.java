@@ -29,6 +29,7 @@ public class Solution {
                     visitedPermutations.add(stateKey);
                     currentPath.add(newPermutation);
                     dfs(currentPath, visitedPermutations);
+                    visitedPermutations.remove(stateKey);
                     currentPath.removeLast();
                 }
             }
@@ -49,6 +50,8 @@ public class Solution {
         if (solutionList.size() == 0) {
             System.out.println("No solution found");
             return;
+        } else {
+            System.out.println("No. of solutions: " + solutionList.size());
         }
 
         int minIndex = 0;
