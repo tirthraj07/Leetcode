@@ -6,9 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-// There is a more optimum solution using Disjoint Union Sets. I haven't learnt that yet so this will do for now
 // 38 ms Java Solution using DFS
-
 class Solution {
     private void dfs(String email, LinkedList<String> emails, HashSet<String> visited,
             Map<String, ArrayList<String>> adjList) {
